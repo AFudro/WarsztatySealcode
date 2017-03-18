@@ -1,0 +1,39 @@
+* {
+	background-color: #edeceb;
+}
+
+body {
+ font-family: Arial, Verdana, sans-serif;
+ float: left;
+ color: black;}
+ 
+fieldset {
+	border-color: #767069;
+	
+}
+  
+  
+ .date {
+   width: 100px;
+   float: left;
+   }
+   
+ form.addnew {
+    action="";
+    text-align: right;
+    float: right;}
+    
+ul { display:table; margin:0 auto;} 
+
+ .list { 
+   float: left;
+   background-color: #fafafa;
+   position: relative;
+   left: 80px;
+ }
+ 
+footer {
+  font-size: 50%;
+  text-align: center;
+}
+   
