@@ -1,0 +1,53 @@
+<html>
+	<body>
+		<h1 id="heading">xyz</h1>
+		<p id="paragraph-one">xyz</p>
+		<p id="paragraph-two">xyz</p>
+		<p id="paragraph-three">xyz</p>
+		<p id="paragraph-four">xyz</p>
+		<script>
+			var months = ['styczeñ', 'luty', 'marzec', 'kwiecieñ', 'maj', 'czerwiec', 'lipiec', 'sierpieñ', 'wrzesieñ', 'paŸdziernik', 'listopad', 'grudzieñ'];
+			var daysOfWeek = ['niedziela', 'poniedzia³ek', 'wtorek', 'œroda', 'czwartek', 'pi¹tek', 'sobota'];
+			var d = new Date();
+
+			var el = document.getElementById('heading'); 
+			el.innerHTML = 'Andrzej Fudro'; 
+
+			el = document.getElementById('paragraph-one'); 
+			el.innerHTML = 'Data, która pojawi siê przy otwarciu tej strony to: ' + daysOfWeek[d.getDay()] +', '  + d.getDate() + ', ' + months[d.getMonth()] +', ' +  d.getFullYear() + 'r. '  +
+			'<br/>Godzina w momencie otwarcia strony: ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + ':' + d.getMilliseconds() + '.';
+
+			var z= "Podstaw¹ szczêœcia jest wolnoœæ, a podstaw¹ wolnoœci odwaga.";
+
+			el = document.getElementById('paragraph-two'); 
+			el.innerHTML ='Operujê na zdaniu: "Podstaw¹ szczêœcia jest wolnoœæ, a podstaw¹ wolnoœci odwaga."' +
+			' <br/><br/>Trzynastym znakiem w tym zdaniu jest: ' + z.charAt(13) +
+			'.<br/> Znaki pomiêdzy 7. a 12. pozycj¹ to: ' + z.substring(7,12) +
+			".<br/> Pierwszy raz znak '¹' pojawia siê na miejscu: " + z.indexOf('¹') +
+			'. <br/>Ten ci¹g ma ' +  z.length + ' znaków.' + 
+			". <br/> Po zamianie 'podstaw¹' na 'fundamentem' mamy: " + z.replace('podstaw¹', 'fundamentem') +
+			'. <br/>Czêœæ zdania przed przecinkiem to: ' + z.split(",")[0] +
+			'.<br/> Druga czêœæ zdania po odwróceniu to: ' +  z.split(',')[1].split('').reverse().join('') + '. ';
+
+			el = document.getElementById('paragraph-three'); 
+			el.innerHTML ='Korzystam z dodatkowych wiadomoœci o obiekcie Math ze strony: ' + 'http://kursjs.pl/kurs/math.php ' +
+			'<br/>Zadanie 1. Mam funkcjê kwadratow¹: ' +
+			'f(x) = x^2 + 5x + 6 ' +
+			'<br/>Wyró¿nik tego trójmianu to: ' + (Math.pow(5,2) - (4*1*6)) +
+			'. <br/>Pierwiastek kwadratowy tego wyró¿nika to: ' +  Math.sqrt(Math.pow(5,2) - (4*1*6)) +
+			'. <br/>Miejscami zerowymi tej funkcji s¹: ' + (-5 - Math.sqrt(Math.pow(5,2) - (4*1*6))) / (2*1) + ' i ' + (-5 + Math.sqrt(Math.pow(5,2) - (4*1*6))) / (2*1);
+
+			var n= Math.sqrt(Math.abs(Math.sin(Math.log(Math.pow(2,Math.PI/6))) + Math.max(0, Math.PI/6) + Math.abs(-Math.pow(Math.E,(2*Math.PI/6)) + Math.min(-1, Math.PI/6))));
+
+			el = document.getElementById('paragraph-four'); 
+			el.innerHTML ='Kontynuujê pracê z obiektem Math i u¿ywam obiektu Number: ' +
+			'<br/>Zadanie 2. Obliczam wartoœæ funkcji: '+
+			'f(x) = sqrt(|sin(ln(2^(x))) + max(0, x) + |-e^(2x) + min(-1, x)||) '+
+			'dla x = pi/6.'+ 
+			' <br/>Mój wynik to: ' + n +
+
+			'Wynik w notacji wyk³adniczej to: ' + n.toExponential() + 
+			'. <br/> Po zaokr¹leniu wyniku w górê mam: ' + Math.ceil(n);
+		</script>
+	</body>
+</html>
