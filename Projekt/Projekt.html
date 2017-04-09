@@ -2,31 +2,31 @@
 <html lang="pl">
  <head>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<meta charset="iso-8859-2/>
+	<meta charset="iso-8859-2"/>
 	<title>Projekt</title>
 	<meta name="description" content="projekt">
  </head>
 <body>
-  <fieldset>
-	<h3 align="center"> Co muszę zrobić?</h3>
-    <fieldset>
-		<div class="date"><p> Data:</p>
-		<p> 18-03-2017</p></div>
-		<form class="addnew">
-			<p>Nowe zadanie:</p>
-			<input type="text" name="task" />
-			<input type="submit" name="add" value="Dodaj" />  
-		</form>
-     </fieldset>
-    <br/>
-    <form class="list">
-      <input type="submit" name="remove"	value="usuń" /> 
-      <input type="checkbox" name="t1" value="yes"  /> zbudować dom
-      <br/>
-      <input type="submit" name="remove"	value="usuń" /> 
-	    <input type="checkbox" name="t2" value="yes" /> posadzić drzewo
-    </form>
-	</fieldset>
-  <footer>Aplikacja wykonana przez Andrzeja Fudro na potrzeby warsztatów Sealcode</footer>
-  </body>
+	<div class="wrapper">
+		<h3 align="center"> Co muszę zrobić?</h3>
+		<div class="dateAddContainer">
+			<div class="date"><b><p align="center"> Data:</p></b>
+				<p> 18-03-2017</p></div>
+			<div class="addnew">
+				<b><p align="center">Nowe zadanie:</p></b>
+				<input type="text" name="task" />
+				<input type="submit" name="add" value="Dodaj" />  
+			</div>
+		</div>
+		<div class="list">
+			<ul>
+				<li><input type="submit" name="remove"	value="usuń" /> 
+					<input type="checkbox" name="t1" value="yes"  /> zbudować dom</li>
+				<li><input type="submit" name="remove"	value="usuń" /> 
+					<input type="checkbox" name="t2" value="yes" /> posadzić drzewo</li>
+			</ul>
+		</div>
+		<footer>Aplikacja wykonana przez Andrzeja Fudro na potrzeby warsztatów Sealcode</footer>
+	</div>
+ </body>
 </html>
