@@ -3,13 +3,13 @@ h3{
 }
 
 body {
- font-family: Georgia, Arial, Verdana, sans-serif;
- font-size: 200%;
- color: black;
- display: flex;
- background-color: #edeceb;
- justify-content: center;
- align-items: center;
+	font-family: Georgia, Arial, Verdana, sans-serif;
+	font-size: 200%;
+	color: black;
+	display: flex;
+	background-color: #edeceb;
+	justify-content: center;
+	align-items: center;
  }
 
  
@@ -36,6 +36,6 @@ body {
 }
  
 footer {
-  font-size: 50%;
+	font-size: 50%;
 }
    
