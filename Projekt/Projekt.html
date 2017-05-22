@@ -11,22 +11,23 @@
 		<h3 align="center"> Co muszê zrobiæ?</h3>
 		<div class="dateAddContainer">
 			<div class="date"><b><p align="center"> Data:</p></b>
-				<p> 18-03-2017</p></div>
+				<p id="date"> DD-MM-YYYY</p></div>
 			<div class="addnew">
 				<b><p align="center">Nowe zadanie:</p></b>
-				<input type="text" name="task" />
-				<input type="submit" name="add" value="Dodaj" />  
+				<input id="task" type="text" name="task" />
+				<input id="add" type="submit" name="add" value="Dodaj" />  
 			</div>
 		</div>
 		<div class="list">
-			<ul>
-				<li><input type="submit" name="remove"	value="usuñ" /> 
-					<input type="checkbox" name="t1" value="yes"  /> zbudowaæ dom</li>
-				<li><input type="submit" name="remove"	value="usuñ" /> 
-					<input type="checkbox" name="t2" value="yes" /> posadziæ drzewo</li>
+			<ul id="tasklist">
+				<li><input type="submit" value="usuñ" /> 
+					<input type="checkbox" value="yes"  /> zbudowaæ dom</li>
+				<li><input type="submit" value="usuñ" /> 
+					<input type="checkbox" value="yes" /> posadziæ drzewo</li>
 			</ul>
 		</div>
 		<footer>Aplikacja wykonana przez Andrzeja Fudro na potrzeby warsztatów Sealcode</footer>
 	</div>
  </body>
+ <script src="script.js"></script>
 </html>
