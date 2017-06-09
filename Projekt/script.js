@@ -1,8 +1,29 @@
-﻿
+﻿function getTasks() { // pobieramy listę zadań po wystąpieniu odpowiedniego zdarzenia
+	var task=[];
+	var i=0;
+	qwest.get("http://sealcode.org:8082/api/v1/resources/task", {}, {cache: true}).then(
+		function(xhr, response) {
+			response.forEach(function(element) { // wywołujemy dla każdego pobranego zasobu
+				task.push(element.body.title);
+			}
+	)});
+	// console.log(task);
+	return task;
+}
+
+
+
+
 function addTask(){
-	if(textBox.value!=0){
+	 var task=getTasks();
+	 console.log(task);
+	 var i=0;
+	
+	 console.log(task.length);
+	while(i<task.length) {
+		
 		var newElement = document.createElement('li');
-		var newText = document.createTextNode(" "+textBox.value);
+		var newText = document.createTextNode(" "+task[i]);
 		var newButton = document.createElement('input');
 		var newCheckBox = document.createElement('input');
 		newButton.setAttribute("type","submit");
@@ -13,7 +34,22 @@ function addTask(){
 		newElement.appendChild(newCheckBox);
 		newElement.appendChild(newText);
 		taskList.appendChild(newElement);
+		i++;
 	}
+	// if(textBox.value!=0){
+		// var newElement = document.createElement('li');
+		// var newText = document.createTextNode(" "+textBox.value);
+		// var newButton = document.createElement('input');
+		// var newCheckBox = document.createElement('input');
+		// newButton.setAttribute("type","submit");
+		// newButton.setAttribute("value","usuń");
+		// newCheckBox.setAttribute("type","checkbox");
+		// newCheckBox.setAttribute("value","yes");
+		// newElement.appendChild(newButton);
+		// newElement.appendChild(newCheckBox);
+		// newElement.appendChild(newText);
+		// taskList.appendChild(newElement);
+	// }
 	refresh();
 }
 
@@ -23,7 +59,7 @@ function remove(evt){
 }
 
 function refresh(){
-	task = document.querySelectorAll('#tasklist li')
+	task = document.querySelectorAll('#tasklist li');
 	var i=0;
 	while(i<task.length) {
 		task[i].firstChild.Id = i;
